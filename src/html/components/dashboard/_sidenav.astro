@@ -52,7 +52,7 @@ const htmlPath = convertPathToHtml(path);
                 href={htmlPath + "/index.html"}
                 class:list={["nav-link", page === "index" && "active"]}
               >
-                <i class="nav-icon bi bi-circle"></i>
+                <i class="nav-icon bi bi-bar-chart"></i>
                 <p>Dashboard v1</p>
               </a>
             </li>
@@ -112,6 +112,114 @@ const htmlPath = convertPathToHtml(path);
             </li>
           </ul>
         </li>
+
+        <!-- Nuevo submenú para Recolección de Datos -->
+        <li class:list={["nav-item", mainPage === "data-collection" && "menu-open"]}>
+          <a href="#" class:list={["nav-link", mainPage === "data-collection" && "active"]}>
+            <i class="nav-icon bi bi-journal-text"></i>
+            <p>
+              Recolección de Datos
+              <i class="nav-arrow bi bi-chevron-right"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "buildings" && "active"]}>
+                <i class="nav-icon bi bi-building"></i>
+                <p>Edificios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "vehicles" && "active"]}>
+                <i class="nav-icon bi bi-car-front"></i>
+                <p>Vehículos</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "employees" && "active"]}>
+                <i class="nav-icon bi bi-people-fill"></i>
+                <p>Empleados</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "business-trips" && "active"]}>
+                <i class="nav-icon bi bi-airplane"></i>
+                <p>Viajes de Negocios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "suppliers" && "active"]}>
+                <i class="nav-icon bi bi-truck"></i>
+                <p>Proveedores</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "mass-import" && "active"]}>
+                <i class="nav-icon bi bi-cloud-arrow-up"></i>
+                <p>Importación en Masa</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+           <!-- Título PLAN DE ACCIÓN -->
+        <li class="nav-header">PLAN DE ACCIÓN</li>
+        
+        <!-- Submenú Reducción -->
+        <li class:list={["nav-item", mainPage === "reduction" && "menu-open"]}>
+          <a href="#" class:list={["nav-link", mainPage === "reduction" && "active"]}>
+            <i class="nav-icon bi bi-arrow-down-up"></i>
+            <p>
+              Reducción
+              <i class="right bi bi-chevron-down"></i>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "goal" && "active"]}>
+                <i class="nav-icon bi bi-caret-right-fill"></i>
+                <p>Meta</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "reduction-plan" && "active"]}>
+                <i class="nav-icon bi bi-file-earmark-text"></i>
+                <p>Plan de reducción</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "scenarios" && "active"]}>
+                <i class="nav-icon bi bi-caret-right-fill"></i>
+                <p>Escenarios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "reduction-plan2" && "active"]}>
+                <i class="nav-icon bi bi-file-earmark-text"></i>
+                <p>Plan de reducción</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "partners" && "active"]}>
+                <i class="nav-icon bi bi-people-fill"></i>
+                <p>Partners</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class:list={["nav-link", page === "certifications" && "active"]}>
+                <i class="nav-icon bi bi-badge-ad-fill"></i>
+                <p>Certificaciones</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+
+
+
+
+
+
         <li class:list={["nav-item", mainPage === "widgets" && "menu-open"]}>
           <a
             href="#"
