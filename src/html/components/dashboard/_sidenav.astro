@@ -12,13 +12,13 @@ const htmlPath = convertPathToHtml(path);
     <a href={htmlPath + "/index.html"} class="brand-link">
       <!--begin::Brand Image-->
       <img
-        src={path + "/assets/img/AdminLTELogo.png"}
+        src={path + "/assets/img/pepe.png"}
         alt="AdminLTE Logo"
         class="brand-image opacity-75 shadow"
       />
       <!--end::Brand Image-->
       <!--begin::Brand Text-->
-      <span class="brand-text fw-light">AdminLTE 4</span>
+      <span class="brand-text fw-light"></span>
       <!--end::Brand Text-->
     </a>
     <!--end::Brand Link-->
@@ -34,12 +34,13 @@ const htmlPath = convertPathToHtml(path);
         role="menu"
         data-accordion="false"
       >
+      <li class="nav-header">MEDICIÓN</li>
         <li class:list={["nav-item", mainPage === "dashboard" && "menu-open"]}>
           <a
             href="#"
             class:list={["nav-link", mainPage === "dashboard" && "active"]}
           >
-            <i class="nav-icon bi bi-speedometer"></i>
+            <i class="nav-icon bi bi-speedometer"> </i>
             <p>
               Dashboard
               <i class="nav-arrow bi bi-chevron-right"></i>
@@ -71,6 +72,42 @@ const htmlPath = convertPathToHtml(path);
               >
                 <i class="nav-icon bi bi-circle"></i>
                 <p>Dashboard v3</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index3.html"}
+                class:list={["nav-link", page === "index3" && "active"]}
+              >
+                <i class="nav-icon bi bi-boxes"></i>
+                <p>Alcances</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index3.html"}
+                class:list={["nav-link", page === "index3" && "active"]}
+              >
+                <i class="nav-icon bi bi-building"></i>
+                <p>Edificios</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index3.html"}
+                class:list={["nav-link", page === "index3" && "active"]}
+              >
+                <i class="nav-icon bi bi-car-front"></i>
+                <p>Vehículos</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                href={htmlPath + "/index3.html"}
+                class:list={["nav-link", page === "index3" && "active"]}
+              >
+                <i class="nav-icon bi bi-lightning-charge"></i>
+                <p>Consumos</p>
               </a>
             </li>
           </ul>
