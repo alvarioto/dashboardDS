@@ -1,6 +1,6 @@
 ---
-import {convertPathToHtml} from "../../../utils/index.js";
-const {path, mainPage, page} = Astro.props;
+import { convertPathToHtml } from "../../../utils/index.js";
+const { path, mainPage, page } = Astro.props;
 const htmlPath = convertPathToHtml(path);
 ---
 
@@ -12,7 +12,7 @@ const htmlPath = convertPathToHtml(path);
     <a href={htmlPath + "/index.html"} class="brand-link">
       <!--begin::Brand Image-->
       <img
-        src={path + "/assets/img/pepe.png"}
+        src={path + "/assets/img/desarrollocircular.png"}
         alt="AdminLTE Logo"
         class="brand-image opacity-75 shadow"
       />
@@ -34,7 +34,17 @@ const htmlPath = convertPathToHtml(path);
         role="menu"
         data-accordion="false"
       >
-      <li class="nav-header">MEDICIÓN</li>
+        <li class="nav-item">
+          <a
+            href={htmlPath + "/index3.html"}
+            class:list={["nav-link", page === "index3" && "active"]}
+          >
+            <i class="nav-icon bi bi-house-door"></i>
+            <p>INICIO</p>
+          </a>
+        </li>
+
+        <li class="nav-header">MEDICIÓN</li>
         <li class:list={["nav-item", mainPage === "dashboard" && "menu-open"]}>
           <a
             href="#"
@@ -114,8 +124,19 @@ const htmlPath = convertPathToHtml(path);
         </li>
 
         <!-- Nuevo submenú para Recolección de Datos -->
-        <li class:list={["nav-item", mainPage === "data-collection" && "menu-open"]}>
-          <a href="#" class:list={["nav-link", mainPage === "data-collection" && "active"]}>
+        <li
+          class:list={[
+            "nav-item",
+            mainPage === "data-collection" && "menu-open",
+          ]}
+        >
+          <a
+            href="#"
+            class:list={[
+              "nav-link",
+              mainPage === "data-collection" && "active",
+            ]}
+          >
             <i class="nav-icon bi bi-journal-text"></i>
             <p>
               Recolección de Datos
@@ -124,102 +145,127 @@ const htmlPath = convertPathToHtml(path);
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "buildings" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "buildings" && "active"]}
+              >
                 <i class="nav-icon bi bi-building"></i>
                 <p>Edificios</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "vehicles" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "vehicles" && "active"]}
+              >
                 <i class="nav-icon bi bi-car-front"></i>
                 <p>Vehículos</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "employees" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "employees" && "active"]}
+              >
                 <i class="nav-icon bi bi-people-fill"></i>
                 <p>Empleados</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "business-trips" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "business-trips" && "active"]}
+              >
                 <i class="nav-icon bi bi-airplane"></i>
                 <p>Viajes de Negocios</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "suppliers" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "suppliers" && "active"]}
+              >
                 <i class="nav-icon bi bi-truck"></i>
                 <p>Proveedores</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "mass-import" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "mass-import" && "active"]}
+              >
                 <i class="nav-icon bi bi-cloud-arrow-up"></i>
                 <p>Importación en Masa</p>
               </a>
             </li>
           </ul>
         </li>
-
-           <!-- Título PLAN DE ACCIÓN -->
+        <br />
+        <!-- Título PLAN DE ACCIÓN -->
         <li class="nav-header">PLAN DE ACCIÓN</li>
-        
+
         <!-- Submenú Reducción -->
-        <li class:list={["nav-item", mainPage === "reduction" && "menu-open"]}>
-          <a href="#" class:list={["nav-link", mainPage === "reduction" && "active"]}>
-            <i class="nav-icon bi bi-arrow-down-up"></i>
+        <li class:list={["nav-item", mainPage === "dashboard" && "menu-open"]}>
+          <a
+            href="#"
+            class:list={["nav-link", mainPage === "dashboard" && "active"]}
+          >
+            <i class="nav-icon bi bi-graph-down-arrow"> </i>
             <p>
               Reducción
-              <i class="right bi bi-chevron-down"></i>
+              <i class="nav-arrow bi bi-chevron-right"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "goal" && "active"]}>
-                <i class="nav-icon bi bi-caret-right-fill"></i>
+              <a
+                href="#"
+                class:list={["nav-link", page === "goal" && "active"]}
+              >
+                <i class="nav-icon bi bi-graph-up"></i>
                 <p>Meta</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "reduction-plan" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "reduction-plan" && "active"]}
+              >
                 <i class="nav-icon bi bi-file-earmark-text"></i>
                 <p>Plan de reducción</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "scenarios" && "active"]}>
-                <i class="nav-icon bi bi-caret-right-fill"></i>
+              <a
+                href="#"
+                class:list={["nav-link", page === "scenarios" && "active"]}
+              >
+                <i class="nav-icon bi bi-123"></i>
                 <p>Escenarios</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "reduction-plan2" && "active"]}>
-                <i class="nav-icon bi bi-file-earmark-text"></i>
-                <p>Plan de reducciónnnnnnn</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "partners" && "active"]}>
+              <a
+                href="#"
+                class:list={["nav-link", page === "partners" && "active"]}
+              >
                 <i class="nav-icon bi bi-people-fill"></i>
                 <p>Partners</p>
               </a>
             </li>
-            <li class="nav-item">
-              <a href="#" class:list={["nav-link", page === "certifications" && "active"]}>
-                <i class="nav-icon bi bi-badge-ad-fill"></i>
-                <p>Certificaciones</p>
-              </a>
-            </li>
           </ul>
         </li>
-
-
-
-
-
-
-
+        <li class="nav-item">
+          <a
+            href="#"
+            class:list={["nav-link", page === "certifications" && "active"]}
+          >
+            <i class="nav-icon bi bi-badge-ad-fill"></i>
+            <p>Certificaciones</p>
+          </a>
+        </li>
+        <br />
+        <br />
         <li class:list={["nav-item", mainPage === "widgets" && "menu-open"]}>
           <a
             href="#"
@@ -269,9 +315,7 @@ const htmlPath = convertPathToHtml(path);
             <i class="nav-icon bi bi-clipboard-fill"></i>
             <p>
               Layout Options
-              <span class="nav-badge badge text-bg-secondary me-3"
-              >6</span
-              >
+              <span class="nav-badge badge text-bg-secondary me-3">6</span>
               <i class="nav-arrow bi bi-chevron-right"></i>
             </p>
           </a>
@@ -454,7 +498,10 @@ const htmlPath = convertPathToHtml(path);
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href={htmlPath + "/examples/register.html"} class="nav-link">
+                  <a
+                    href={htmlPath + "/examples/register.html"}
+                    class="nav-link"
+                  >
                     <i class="nav-icon bi bi-circle"></i>
                     <p>Register</p>
                   </a>
@@ -471,13 +518,19 @@ const htmlPath = convertPathToHtml(path);
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href={htmlPath + "/examples/login-v2.html"} class="nav-link">
+                  <a
+                    href={htmlPath + "/examples/login-v2.html"}
+                    class="nav-link"
+                  >
                     <i class="nav-icon bi bi-circle"></i>
                     <p>Login</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href={htmlPath + "/examples/register-v2.html"} class="nav-link">
+                  <a
+                    href={htmlPath + "/examples/register-v2.html"}
+                    class="nav-link"
+                  >
                     <i class="nav-icon bi bi-circle"></i>
                     <p>Register</p>
                   </a>

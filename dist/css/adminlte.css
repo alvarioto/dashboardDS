@@ -7177,7 +7177,7 @@ textarea.form-control-lg {
 }
 
 .opacity-75 {
-  opacity: 0.75 !important;
+  opacity: 1 !important;
 }
 
 .opacity-100 {
@@ -8900,7 +8900,7 @@ textarea.form-control-lg {
 
 .bg-body {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-body-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #2185552c;
 }
 
 .bg-transparent {
@@ -8910,12 +8910,17 @@ textarea.form-control-lg {
 
 .bg-body-secondary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-secondary-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #24382f;
+}
+
+
+.custom-bg-color {
+  background-color: #abcdef; /* Color de fondo específico */
 }
 
 .bg-body-tertiary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #21855510;
 }
 
 .bg-opacity-10 {
@@ -12859,7 +12864,7 @@ textarea.form-control-lg {
 .sidebar-brand .brand-link .brand-image {
   float: left;
   width: auto;
-  max-height: 33px;
+  max-height: 53px;
   line-height: 0.8;
 }
 .sidebar-brand .brand-link .brand-image-xs {
